@@ -27,5 +27,41 @@ const timelineData = [
         title: 'ARPA Awards Contract to Build ARPANET',
         content: 'ARPA contracts BBN Technologies to develop the first packet-switching network, ARPANET. This decision represents the formal beginning of work on the precursor to the modern internet.',
         relatedArticle: null
-    }
+    },
+    {
+        date: '1975-01-01',
+        title: 'Test 1975',
+        content: 'Testing Testing',
+        relatedArticle: null
+    },
+    {
+        date: '1985-01-01',
+        title: 'Test 1985',
+        content: 'Testing Testing',
+        relatedArticle: null
+    },
+    {
+        date: '1995-01-01',
+        title: 'Test 1995',
+        content: 'Testing Testing',
+        relatedArticle: null
+    },
+    {
+        date: '2005-01-01',
+        title: 'Test 2005',
+        content: 'Testing Testing',
+        relatedArticle: null
+    },
+    {
+        date: '2015-01-01',
+        title: 'Test 2015',
+        content: 'Testing Testing',
+        relatedArticle: null
+    },
+    {
+        date: '2022-01-01',
+        title: 'Test 2022',
+        content: 'Testing Testing',
+        relatedArticle: null
+    },
 ];

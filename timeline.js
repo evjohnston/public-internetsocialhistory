@@ -7,6 +7,7 @@ class Timeline {
     }
 
     initialize() {
+        // Show all entries by default
         this.render();
         this.setupEventListeners();
     }
@@ -98,18 +99,33 @@ class Timeline {
         this.container.innerHTML = html;
     }
 
+    updateActiveState(clickedButton) {
+        // Remove current class from all buttons
+        document.querySelectorAll('.page-numbers').forEach(btn => {
+            btn.classList.remove('current');
+        });
+        // Add current class to clicked button
+        clickedButton.classList.add('current');
+    }
+
     setupEventListeners() {
-        // Example of setting up year filter buttons
         document.querySelectorAll('.page-numbers').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                const yearRange = e.target.textContent;
-                if (yearRange === 'All') {
+                const decade = e.target.textContent;
+                
+                // Update active state for all cases
+                this.updateActiveState(e.target);
+
+                if (decade === 'All') {
                     this.render();
                     return;
                 }
                 
-                const [startYear, endYear] = yearRange.split('-').map(Number);
+                // Handle decade format (e.g., "1960s")
+                const startYear = parseInt(decade.substring(0, 4));
+                const endYear = startYear + 9;
+                
                 const filteredEntries = this.filterByDateRange(startYear, endYear);
                 this.render(filteredEntries);
             });
@@ -119,5 +135,9 @@ class Timeline {
 
 // Initialize timeline when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    const timeline = new Timeline(timelineData);
+    if (typeof timelineData !== 'undefined') {
+        const timeline = new Timeline(timelineData);
+    } else {
+        console.error('Timeline data not loaded');
+    }
 });

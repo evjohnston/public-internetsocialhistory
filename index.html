@@ -13,21 +13,20 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Timeline - The Social History of the Internet" />
-    <meta property="og:url" content="http://socialhistory.evjohnston.com/timeline/" />
+    <meta property="og:url" content="http://socialhistory.aevjohnston.com/timeline/" />
     <meta property="og:site_name" content="The Social History of the Internet" />
     <meta property="article:modified_time" content="2024-03-01T00:35:13+00:00" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Oswald:wght@400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Oswald:wght@400;700&display=swap"
         rel="stylesheet">
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="timeline-data.js" defer></script>
-    <script src="timeline.js" defer></script>
+    <script src="timeline-data.js"></script>
+    <script src="timeline.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" sizes="32x32" />
@@ -46,21 +45,14 @@
                 <aside class="timeline-sidebar">
                     <div class="sidebar__nav sidebar__date pagination">
                         <span class="sidebar__nav-header">Sort by Decade:</span>
-                        <span class="pill page-numbers current timeline__link">1960s</span>
-                        <a class="pill page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=1970&amp;date_to=1979">1970s</a>
-                        <a class="pill page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=1980&amp;date_to=1989">1980s</a>
-                        <a class="pill page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=1990&amp;date_to=1999">1990s</a>
-                        <a class="pill page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=2000&amp;date_to=2009">2000s</a>
-                        <a class="pill page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=2010&amp;date_to=2019">2010s</a>
-                        <a class="pill page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=2020&amp;date_to=2029">2020s</a>
-                        <a class="pill timeline__link page-numbers"
-                            href="http://socialhistory.evjohnston.com/timeline?page&amp;pagename=timeline&amp;date_from=all">All</a>
+                        <a class="pill page-numbers">1960s</a>
+                        <a class="pill page-numbers">1970s</a>
+                        <a class="pill page-numbers">1980s</a>
+                        <a class="pill page-numbers">1990s</a>
+                        <a class="pill page-numbers">2000s</a>
+                        <a class="pill page-numbers">2010s</a>
+                        <a class="pill page-numbers">2020s</a>
+                        <a class="pill page-numbers current" data-filter="all">All</a>
                     </div>
                 </aside>
                 <div class="content timeline" id="timeline-content">
